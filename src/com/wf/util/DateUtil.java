@@ -46,6 +46,7 @@ public class DateUtil {
     private static Date countMonth(Calendar calendar, int asignMonth, int asignDay) {
         calendar.add(Calendar.MONTH, asignMonth);
         calendar.add(Calendar.DATE, asignDay);
+        calendar.add(Calendar.SECOND, -1);
         return calendar.getTime();
     }
 }
