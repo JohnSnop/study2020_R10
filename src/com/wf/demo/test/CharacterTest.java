@@ -35,4 +35,16 @@ public class CharacterTest {
         System.out.println(localHost.getHostAddress());
         System.out.println(localHost.getHostName());
     }
+
+    @Test
+    public void test4() {
+        // String regex = "a+";// 至少一个
+        // String regex = "a?";// 至多一个
+        String regex = "a*";// 任意个
+        System.out.println("".matches(regex));
+        System.out.println("a".matches(regex));
+        System.out.println("aaa".matches(regex));
+
+    }
+
 }
