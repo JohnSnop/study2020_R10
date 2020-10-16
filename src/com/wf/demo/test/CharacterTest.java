@@ -47,4 +47,10 @@ public class CharacterTest {
 
     }
 
+    @Test
+    public void test5() {
+        // unicode
+        // utf-8
+        System.out.println('\u2211');
+    }
 }

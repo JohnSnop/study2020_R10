@@ -48,7 +48,7 @@ public class ReflectTest {
         Method main = reflectTestClass.getMethod("main", String[].class);
 
         String[] args = {"a", "b", "c"};
-        // main.invoke(null, (Object)args);
+        main.invoke(null, (Object)args);
         main.invoke(null, new Object[]{args});
 
     }

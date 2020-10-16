@@ -10,6 +10,9 @@ import org.junit.Test;
 public class Person {
     private boolean isLive = true;
 
+    /**
+     * 内部类
+     */
     class Heart{
        public void jump() {
            if (isLive) {
@@ -27,6 +30,9 @@ public class Person {
     @Test
     public void test() {
         Person person = new Person();
+        /**
+         * 创建方式
+         */
         Heart heart = person.new Heart();
 
         heart.jump();
