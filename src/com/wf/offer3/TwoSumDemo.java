@@ -37,7 +37,7 @@ public class TwoSumDemo {
     }
 
     /**
-     * 时间复杂度 O(N2)
+     * 时间复杂度 O(N²)
      * @param arrs
      * @param target
      * @return

@@ -16,9 +16,9 @@ public class LockSupportDemo {
     private static Lock lockA = new ReentrantLock();
     private static Condition condition = lockA.newCondition();
     public static void main(String[] args) {
-        demo5();
+        // demo5();
         // demo4();
-        // demo3();
+        demo3();
         // demo2();
         // demo1();
     }
@@ -27,6 +27,7 @@ public class LockSupportDemo {
         Thread a = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "\t" + "+++come in");
             LockSupport.park();
+            // LockSupport.park();
             System.out.println(Thread.currentThread().getName() + "\t" + "+++被唤醒");
         }, "T1");
         a.start();
@@ -37,6 +38,7 @@ public class LockSupportDemo {
         }
         new Thread(() -> {
             LockSupport.unpark(a);
+            LockSupport.unpark(a);// 始终是一个值为1的许可证
             System.out.println(Thread.currentThread().getName() + "\t" + "+++通知");
         }, "T2").start();
     }

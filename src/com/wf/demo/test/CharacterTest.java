@@ -53,4 +53,19 @@ public class CharacterTest {
         // utf-8
         System.out.println('\u2211');
     }
+
+    /**
+     * 小写字母转大写字母
+     */
+    @Test
+    public void test6() {
+        String str = "z13969584";
+        String regex = "^[A-Za-z][0-9]{8}$";
+        System.out.println(str.matches(regex));
+
+        if (Character.isLowerCase(str.charAt(0))) {
+            str = (char)(str.charAt(0) - 32) + str.substring(1);
+        }
+        System.out.println(str);
+    }
 }

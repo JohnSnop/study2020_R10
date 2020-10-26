@@ -29,8 +29,8 @@ public class ForkJoinTest {
     public void test2() {
         Instant start = Instant.now();
         System.out.println(LongStream.rangeClosed(0, 100000000L)
-                .parallel()
-                .reduce(0, Long::sum));
+            .parallel()
+            .reduce(0, Long::sum));
         Instant end = Instant.now();
         System.out.println("耗时：" + Duration.between(start, end).toMillis());
     }

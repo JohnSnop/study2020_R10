@@ -20,7 +20,6 @@ public class ReEntrantLockDemo {
     private static void m2() {
         new Thread(() -> {
             lockA.lock();
-
             try {
                 System.out.println("外层----");
                 lockA.lock();

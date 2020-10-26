@@ -67,9 +67,10 @@ public class LambdaTest {
     
     @Test
     public void test3() {
-        list.sort((o1, o2) -> {
+        /*list.sort((o1, o2) -> {
             return o1.compareTo(o2);
-        });
+        });*/
+        list.sort(String::compareTo);
         list.forEach(System.out::println);
     }
 
